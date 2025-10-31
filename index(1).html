@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+     <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 40px;
+    }
+    table {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th {
+      background-color: #0d6efd;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+    <h2 class="text-center mb-4">📊 Survey Responses (Admin Panel)</h2>
+
+    <div class="d-flex justify-content-center">
+      <input
+        type="text"
+        id="searchInput"
+        class="form-control"
+        placeholder="🔍"
+      />
+    </div>
+
+    <div class="table-responsive mt-3">
+      <table class="table table-striped" id="responseTable">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Department</th>
+      <th>Year</th>
+      <th>Teaching</th>
+      <th>Concepts</th>
+      <th>Library</th>
+      <th>Placement Feedback</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tableBody = document.querySelector("#responseTable tbody");
+  const responses = JSON.parse(localStorage.getItem("surveyResponses")) || [];
+
+  if (responses.length === 0) {
+    tableBody.innerHTML = `<tr><td colspan="8" class="text-center">No responses found</td></tr>`;
+    return;
+  }
+
+  tableBody.innerHTML = responses.map((r) => `
+    <tr>
+      <td>${r.name || "-"}</td>
+      <td>${r.email || "-"}</td>
+      <td>${r.department || "-"}</td>
+      <td>${r.year || "-"}</td>
+      <td>${r.teaching || "-"}</td>
+      <td>${r.concepts || "-"}</td>
+      <td>${r.library || "-"}</td>
+      <td>${r.placementFeedback || "-"}</td>
+    </tr>
+  `).join("");
+});
+</script>
+
+
+
+</body>
+</html>
+

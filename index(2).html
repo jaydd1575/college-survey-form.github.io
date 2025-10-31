@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - College Survey</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #12d14f, #00b4d8);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .login-card {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    .forgot {
+      text-align: right;
+      display: block;
+      margin-top: 10px;
+      color: #007bff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .forgot:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h3 class="text-center mb-4">🔐 Admin Login</h3>
+    <form id="adminLoginForm">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+
+    <span class="forgot" id="forgotPassword">Forgot Password?</span>
+    <p class="text-center text-danger mt-3" id="errorMsg"></p>
+  </div>
+
+  <script>
+    document.getElementById("adminLoginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorMsg = document.getElementById("errorMsg");
+
+      // ✅ Static credentials (you can change them)
+      const adminUser = "admin";
+      const adminPass = "12345";
+
+      if (username === adminUser && password === adminPass) {
+        localStorage.setItem("adminLoggedIn", "true");
+        window.location.href = "admin.html";
+      } else {
+        errorMsg.textContent = "❌ Invalid username or password!";
+      }
+    });
+
+    // 💡 Forgot Password feature
+    document.getElementById("forgotPassword").addEventListener("click", function () {
+      const hint = "Hint: Username is 'admin' and password starts with '12'.";
+      alert(hint);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .content{
+          
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            height: 90px;
+            font-size: x-large;
+        }
+        .forms{
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2 auto;
+      display: grid;
+        }
+         body{
+        background-image: url('Main-Campus-Building.jpg');
+        background-repeat: no-repeat;
+         background-size: 1590px 2090px;
+         }
+    </style>
+</head>
+<body style="color:gold;">
+    <div class="content">
+        Marwadi University Survey Form<br>
+        Please take a few minutes to fill out this survey.
+    </div>
+    <div class="forms">
+       <form>
+  <div class="form-group">
+    <label for="exampleInputName">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail">Email</label>
+    <input type="text" class="form-control" id="email" name="email" placeholder="Enter your Email">
+  </div>
+            
+  <div class="forms">
+            <div class="mb-3">
+            <label class="form-label font-bold text-xl">Year of Study</label><br>
+            <select name="year" id="year" class="form-select">
+            <option value="">Select Year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+            </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label font-bold text-xl">Department</label>
+              <select name="department" id="department" class="form-select">
+                <option value="">Choose...</option>
+                <option>Computer Science And Engineering</option>
+                <option>Information Technology</option>
+                <option>Chemical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>BioInformatics</option>
+                <option>Electrical Engineering</option>
+                <option>B.B.A</option>
+                <option>B.C.A</option>
+                <option>M.B.A</option>
+              </select>
+            </div>
+  </div>
+
+            <div class="mb-3">
+         <label class="form-label font-semibold">   1.How satisfied are you with the teaching quality?</label><br>
+           <label><input type="radio" name="teaching" value="very satisfied">Very Satisfied</label><br>
+          <label><input type="radio" name="teaching" value="Satisfied">Satisfied</label><br>
+            <label><input type="radio" name="teaching" value="Dissatisfied">Dissatisfied</label><br>
+            <label><input type="radio" name="teaching" value="Neutral">Neutral</label><br>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label font-semibold">  2.How well do teachers explain and clarify concepts?</label><br>
+             <input type="radio" name="concepts" value="Excellent">Excellent<br>
+            <input type="radio" name="concepts" value="Average">Average<br>
+             <input type="radio" name="concepts" value="Good">Good<br>
+              <input type="radio" name="concepts" value="Poor">Poor<br>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label font-semibold"> 3.How would you rate classroom and lab facilities?</label><br>
+             <input type="radio" name="rating" value="Excellent">Excellent<br>
+            <input type="radio" name="rating" value="Average">Average<br>
+             <input type="radio" name="rating" value="Good">Good<br>
+              <input type="radio" name="rating" value="Poor">Poor<br>
+            </div>
+            
+            <div class="mb-3">
+             <label class="form-label font-semibold"> 4.Are you satisfied with the cleanliness and maintenance of the campus?</label><br>
+            <label><input type="radio" name="cleanliness" value="yes">Yes</label><br>
+             <label><input type="radio" name="cleanliness" value="no">No</label>
+            </div>
+
+            <div class="mb-3">
+             <label class="form-label font-semibold"> 5.How satisfied are you with library facilities?</label><br>
+            <label><input type="radio" name="library" value="very satisfied">Very Satisfied</label><br>
+             <label><input type="radio" name="library" value="Satisfied">Satisfied</label><br>
+            <label><input type="radio" name="library" value="Dissatisfied">Dissatisfied</label><br>
+            <label><input type="radio" name="library" value="Neutral">Neutral</label><br>
+            </div>
+
+            <div class="mb-3">
+           <label class="form-label font-semibold">  6.Do you participate in extracurricular activities?</label><br>
+            <label><input type="radio" name="activity" value="Always">Always</label><br>
+           <label><input type="radio" name="activity" value="Sometimes">Sometimes</label><br>
+            <label><input type="radio" name="activity" value="Rarely">Rarely</label><br>
+            <label><input type="radio" name="activity" value="Never">Never</label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label font-semibold">7.Do you find the syllabus relevant to your career goals?</label><br>
+                 <label><input type="radio" name="goal" value="yes">Yes</label><br>
+             <label><input type="radio" name="goal" value="no">No</label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label font-semibold">8.How useful do you find the placement training programs?</label>
+                <textarea class="form-control" name="placement-feedback"  placeholder="Write your opinion here..."></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label font-semibold">9.Are you satisfied with the career counseling and internship support?</label><br>
+            <label><input type="radio" name="career" value="yes">Yes</label><br>
+             <label><input type="radio" name="career" value="no">No</label>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label font-semibold">10.Is the hostel accommodation satisfactory (if applicable)?</label><br>
+               <label><input type="radio" name="hostel" value="very satisfied">Very Satisfied</label><br>
+             <label><input type="radio" name="hostel" value="Satisfied">Satisfied</label><br>
+            <label><input type="radio" name="hostel" value="Dissatisfied">Dissatisfied</label><br>
+            <label><input type="radio" name="hostel" value="Neutral">Neutral</label><br>
+            </div>
+
+            <div class="mb-3">
+               <label class="form-label font-semibold">11.What changes would you suggest to improve the college experience?</label>
+                <textarea class="form-control" name="improve"  placeholder="Write your feedback here..."></textarea>
+            </div>
+          
+            <div class="mb-3">
+              <p class="form-label font-bold">Any other Suggestions</p>
+              <textarea class="form-control" id="Suggestion" rows="3"></textarea>
+
+ <button type="submit" class="btn btn-primary btn-lg"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Submit
+</button>
+
+<button type="submit" class="btn btn-primary btn-lg"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Cancel
+</button>
+            </div>
+        </form>
+    </div>
+
+   <script>
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // collect values properly
+  const name = document.getElementById("name")?.value.trim() || "";
+  const email = document.getElementById("email")?.value.trim() || "";
+  const department = document.querySelector("select[name='Department'], #department")?.value || "";
+  const year = document.querySelector("select[name='Year'], #year")?.value || "";
+
+  const teaching = document.querySelector("input[name='teaching']:checked")?.value || "";
+  const concepts = document.querySelector("input[name='concepts']:checked")?.value || "";
+  const library = document.querySelector("input[name='library']:checked")?.value || "";
+  const placementFeedback = document.querySelector("textarea[name='placement-feedback']")?.value.trim() || "";
+
+  // Validation
+  if (!name || !email || !department || !year) {
+    alert("⚠️ Please fill in Name, Email, Department and Year.");
+    return;
+  }
+
+  // Prepare data
+  const formData = {
+    name,
+    email,
+    department,
+    year,
+    teaching,
+    concepts,
+    library,
+    placementFeedback
+  };
+
+  // Save to localStorage
+  const allResponses = JSON.parse(localStorage.getItem("surveyResponses")) || [];
+  allResponses.push(formData);
+  localStorage.setItem("surveyResponses", JSON.stringify(allResponses));
+
+  alert("✅ Thank you! Your response has been recorded.");
+  e.target.reset();
+});
+</script>
+
+
+
+
+    
+
+</body>
+</html>
